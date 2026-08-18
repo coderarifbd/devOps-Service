@@ -352,8 +352,8 @@ header.site-header.scrolled {
   margin-bottom: 5.5rem;
 }
 
-/* Premium Dark Hero Buttons Styling */
-.hero-section .btn-primary {
+/* Premium Buttons Styling */
+.btn-primary {
   display: inline-flex;
   align-items: center;
   gap: 0.65rem;
@@ -370,22 +370,22 @@ header.site-header.scrolled {
   cursor: pointer;
 }
 
-.hero-section .btn-primary svg {
+.btn-primary svg {
   transition: transform var(--transition-fast);
 }
 
-.hero-section .btn-primary:hover {
+.btn-primary:hover {
   background: var(--accent-secondary);
   border-color: var(--accent-secondary);
   box-shadow: 0 8px 25px rgba(var(--accent-primary-rgb), 0.4);
   transform: translateY(-2px);
 }
 
-.hero-section .btn-primary:hover svg {
+.btn-primary:hover svg {
   transform: translateX(4px);
 }
 
-.hero-section .btn-secondary {
+.btn-secondary {
   display: inline-flex;
   align-items: center;
   gap: 0.65rem;
@@ -401,7 +401,7 @@ header.site-header.scrolled {
   cursor: pointer;
 }
 
-.hero-section .btn-secondary:hover {
+.btn-secondary:hover {
   background: rgba(255, 255, 255, 0.06);
   border-color: #FFFFFF;
   transform: translateY(-2px);
@@ -1261,7 +1261,7 @@ footer.site-footer h5 {
     max-width: 320px;
   }
   
-  .hero-section .btn-primary, .hero-section .btn-secondary {
+  .btn-primary, .btn-secondary {
     width: 100%;
     justify-content: center;
   }
