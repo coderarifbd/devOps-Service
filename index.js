@@ -66,10 +66,14 @@ document.addEventListener('DOMContentLoaded', () => {
       // Retrieve values
       const nameInput = document.getElementById('name');
       const emailInput = document.getElementById('email');
+      const phoneInput = document.getElementById('phone');
+      const companyInput = document.getElementById('company');
       const messageInput = document.getElementById('message');
 
       const name = nameInput.value.trim();
       const email = emailInput.value.trim();
+      const phone = phoneInput.value.trim();
+      const company = companyInput.value.trim();
       const message = messageInput.value.trim();
 
       // Basic client side validation checks
@@ -85,9 +89,15 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
-      if (!message) {
-        alert('Please describe your needs/message.');
-        messageInput.focus();
+      if (!phone) {
+        alert('Please enter your phone number.');
+        phoneInput.focus();
+        return;
+      }
+
+      if (!company) {
+        alert('Please enter your company name.');
+        companyInput.focus();
         return;
       }
 
