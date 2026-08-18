@@ -253,23 +253,28 @@ header.site-header.scrolled {
   transition: var(--transition-normal);
 }
 
-/* Immersive Dark Hero Section (Nexi Layout with Dark background) */
+/* Immersive Dark Hero Section (Left-aligned text with loop background) */
 .hero-section {
   padding-top: 150px;
-  padding-bottom: 110px; /* Restored comfortable bottom padding */
-  background-color: #050814; /* Immersive Dark Space Blue background */
+  padding-bottom: 60px; /* Reduced bottom padding for stats overlap */
+  background-color: #04091e; /* Deep blue base matching image */
   position: relative;
-  overflow: hidden;
-  /* Crimson Ambient Glow spotlight centered behind text */
+  overflow: visible; /* Allow stats card to hang off the edge */
+  
+  /* Load user's infinity loop image on the right, with a gradient mask on the left for text contrast */
   background-image: 
-    radial-gradient(circle at 50% 40%, rgba(var(--accent-primary-rgb), 0.15) 0%, rgba(5, 8, 20, 0) 65%);
+    linear-gradient(to right, #04091e 35%, rgba(4, 9, 30, 0.6) 65%, rgba(4, 9, 30, 0) 100%),
+    url('hero_loop.jpg');
+  background-size: cover;
+  background-position: right center;
+  background-repeat: no-repeat;
 }
 
-.hero-container-centered {
+.hero-container-left {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
+  align-items: flex-start;
+  text-align: left;
   position: relative;
   z-index: 4; /* Sit above curves and glows */
 }
@@ -289,7 +294,7 @@ header.site-header.scrolled {
 }
 
 .decor-right {
-  right: -80px;
+  display: none; /* Hide right curves to prevent cluttering the loop graphic */
 }
 
 .decor-line svg {
@@ -298,43 +303,35 @@ header.site-header.scrolled {
 }
 
 /* Center Badge Capsule styling (Glassmorphic white) */
-.badge-capsule-wrapper {
-  margin-bottom: 2.25rem;
+.badge-wrapper {
+  margin-bottom: 1.75rem;
   display: flex;
-  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
 }
 
-.badge-capsule {
+.badge {
   display: inline-flex;
   align-items: center;
-  padding: 4px 16px 4px 4px;
+  gap: 0.5rem;
+  padding: 0.45rem 1rem;
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 9999px;
-  font-size: 0.8rem;
-  font-weight: 600;
-  gap: 0.75rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  font-weight: 700;
   color: #CBD5E1;
-}
-
-.badge-capsule-tag {
-  background: var(--accent-primary);
-  color: #FFFFFF;
-  padding: 3px 12px;
-  border-radius: 9999px;
-  font-weight: 800;
   text-transform: uppercase;
-  font-size: 0.7rem;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.05em;
 }
 
-.badge-capsule-text {
-  letter-spacing: -0.01em;
+.badge svg {
+  color: var(--accent-primary);
 }
 
 .hero-section .hero-title {
   margin-bottom: 1.75rem;
-  max-width: 900px;
+  max-width: 680px; /* Restrict width to avoid overlapping graphic on right */
   line-height: 1.15;
   color: #FFFFFF; /* Pure White text on dark hero */
 }
@@ -344,14 +341,14 @@ header.site-header.scrolled {
   color: #94A3B8; /* Slate gray subtext */
   font-size: 1.15rem;
   line-height: 1.8;
-  max-width: 780px;
+  max-width: 650px;
 }
 
 .hero-ctas {
   display: flex;
   gap: 1.25rem;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   margin-bottom: 5.5rem;
 }
 
@@ -410,22 +407,21 @@ header.site-header.scrolled {
   transform: translateY(-2px);
 }
 
-/* Centered Dark Glassmorphic Stats Section under Hero */
+/* Floating Stats Section under Hero (Overlapping Card layout) */
 .stats-panel {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   width: 100%;
   max-width: 960px;
-  background: rgba(255, 255, 255, 0.03); /* Translucent dark glass background */
-  backdrop-filter: blur(25px);
-  -webkit-backdrop-filter: blur(25px);
-  border: 1px solid rgba(255, 255, 255, 0.08); /* White border glow */
+  background: #FFFFFF; /* High-contrast white card */
+  border: 1px solid rgba(0, 0, 0, 0.05);
   border-radius: var(--radius-md);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3); /* Stronger shadow */
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08); /* Clean shadow blur */
   overflow: hidden;
   margin: 0 auto;
+  transform: translateY(110px); /* Hangs perfectly off the edge of Hero */
   position: relative;
-  z-index: 5;
+  z-index: 10;
 }
 
 .stat-item {
@@ -434,7 +430,7 @@ header.site-header.scrolled {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  border-right: 1px solid rgba(255, 255, 255, 0.08);
+  border-right: 1px solid var(--border-color);
 }
 
 .stat-item:last-child {
@@ -447,20 +443,20 @@ header.site-header.scrolled {
   color: var(--accent-primary);
   margin-bottom: 0.25rem;
   letter-spacing: -0.04em;
-  text-shadow: 0 0 30px rgba(var(--accent-primary-rgb), 0.3);
 }
 
 .stat-label {
   font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: #CBD5E1; /* Light gray text for readability on dark backdrop */
+  color: var(--text-secondary); /* Dark slate gray text */
   font-weight: 700;
 }
 
 /* Light Mode Section styling for body content below Hero */
 #why-choose-us {
   background-color: var(--bg-secondary);
+  padding-top: 150px; /* Offset the stats panel overlap */
 }
 
 #services, #partnership, #contact {
@@ -939,15 +935,26 @@ footer.site-footer h5 {
 
 /* Responsive Breakpoints */
 @media (max-width: 1024px) {
-  .hero-grid {
-    grid-template-columns: 1fr;
+  .hero-section {
+    background-image: 
+      linear-gradient(to bottom, rgba(4, 9, 30, 0.7) 30%, rgba(4, 9, 30, 0.9) 100%),
+      url('hero_loop.jpg'); /* Fade down on mobile/tablet */
+    background-position: center center;
+    padding-bottom: 80px;
+  }
+
+  .hero-container-left {
+    align-items: center;
     text-align: center;
-    gap: 3.5rem;
-    margin-bottom: 3.5rem;
   }
   
-  .decor-line {
-    display: none; /* Hide decorative background lines on mobile/tablet to reduce noise */
+  .hero-section .hero-title,
+  .hero-section .hero-description {
+    max-width: 100%;
+  }
+
+  .hero-ctas {
+    justify-content: center;
   }
 
   .split-layout {
@@ -1034,6 +1041,7 @@ footer.site-footer h5 {
   
   .stats-panel {
     grid-template-columns: 1fr;
+    transform: translateY(80px); /* Hang out slightly less on mobile */
   }
   
   .stat-item {
