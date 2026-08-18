@@ -121,7 +121,7 @@ p {
 }
 
 section {
-  padding: 110px 0;
+  padding: 70px 0;
   position: relative;
 }
 
@@ -255,8 +255,8 @@ header.site-header.scrolled {
 
 /* Immersive Dark Hero Section (Left-aligned text with loop background) */
 .hero-section {
-  padding-top: 150px;
-  padding-bottom: 60px; /* Reduced bottom padding for stats overlap */
+  padding-top: 110px;
+  padding-bottom: 20px; /* Reduced bottom padding for stats overlap */
   background-color: #04091e; /* Deep blue base matching image */
   position: relative;
   overflow: visible; /* Allow stats card to hang off the edge */
@@ -456,7 +456,7 @@ header.site-header.scrolled {
 /* Light Mode Section styling for body content below Hero */
 #why-choose-us {
   background-color: var(--bg-secondary);
-  padding-top: 150px; /* Offset the stats panel overlap */
+  padding-top: 125px; /* Offset the stats panel overlap */
 }
 
 #services, #partnership, #contact {
