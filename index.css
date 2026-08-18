@@ -456,7 +456,7 @@ header.site-header.scrolled {
 /* Light Mode Section styling for body content below Hero */
 #why-choose-us {
   background-color: var(--bg-secondary);
-  padding-top: 125px; /* Offset the stats panel overlap */
+  padding-top: 190px; /* Offset the stats panel overlap with ample breathing space */
 }
 
 #services, #partnership, #contact {
@@ -1207,6 +1207,10 @@ footer.site-footer h5 {
 @media (max-width: 768px) {
   section {
     padding: 80px 0;
+  }
+  
+  #why-choose-us {
+    padding-top: 140px; /* Reduced top padding on mobile viewports */
   }
   
   .nav-menu {
