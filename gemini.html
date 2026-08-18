@@ -1,0 +1,1251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DevOps Managed Services & Consulting | AOT Saudi Arabia</title>
+  <meta name="description" content="Accelerate Your Software Delivery with Expert DevOps Managed Services and Strategic Consulting.">
+  
+  <!-- Typography matching AOT Standard -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    :root {
+      --aot-navy-deep: #071326;
+      --aot-navy-dark: #002B49;
+      --aot-blue-main: #0F52BA;
+      --aot-cyan: #00A3E0;
+      --aot-cyan-glow: rgba(0, 163, 224, 0.18);
+      --aot-gold: #FFB703;
+      --text-main: #1A2433;
+      --text-muted: #5B6B82;
+      --bg-light: #F4F8FC;
+      --bg-white: #FFFFFF;
+      --border-color: #E2EBF4;
+      --shadow-subtle: 0 10px 30px rgba(0, 43, 73, 0.06);
+      --shadow-hover: 0 20px 45px rgba(0, 43, 73, 0.14);
+      --radius-sm: 8px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
+      --transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      color: var(--text-main);
+      background-color: var(--bg-white);
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      line-height: 1.22;
+      color: var(--aot-navy-dark);
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      max-width: 1260px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Badge & Tag Elements */
+    .badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 18px;
+      background: var(--aot-cyan-glow);
+      color: var(--aot-cyan);
+      border: 1px solid rgba(0, 163, 224, 0.4);
+      border-radius: 50px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.9px;
+      margin-bottom: 20px;
+    }
+
+    .badge-pill.dark {
+      background: rgba(255, 255, 255, 0.1);
+      color: #FFFFFF;
+      border-color: rgba(255, 255, 255, 0.25);
+    }
+
+    /* Section Standard Headers */
+    .section-header {
+      text-align: center;
+      max-width: 820px;
+      margin: 0 auto 55px auto;
+    }
+
+    .section-header h2 {
+      font-size: 2.5rem;
+      letter-spacing: -0.5px;
+      margin-bottom: 16px;
+    }
+
+    .section-header p {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 30px;
+      border-radius: var(--radius-sm);
+      font-weight: 700;
+      font-size: 0.96rem;
+      cursor: pointer;
+      transition: var(--transition);
+      border: none;
+    }
+
+    .btn-cyan {
+      background: linear-gradient(135deg, var(--aot-cyan) 0%, #0081B4 100%);
+      color: #FFFFFF;
+      box-shadow: 0 6px 20px rgba(0, 163, 224, 0.35);
+    }
+
+    .btn-cyan:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(0, 163, 224, 0.5);
+      color: #FFFFFF;
+    }
+
+    .btn-outline-white {
+      border: 1.5px solid rgba(255, 255, 255, 0.4);
+      color: #FFFFFF;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(8px);
+    }
+
+    .btn-outline-white:hover {
+      background: #FFFFFF;
+      color: var(--aot-navy-deep);
+      border-color: #FFFFFF;
+    }
+
+    /* ==========================================================================
+       NAVBAR (AOT Brand Style)
+       ========================================================================== */
+    .site-header {
+      position: sticky;
+      top: 0;
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(14px);
+      z-index: 1000;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .nav-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 82px;
+    }
+
+    .logo-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1.7rem;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 800;
+      color: var(--aot-navy-dark);
+    }
+
+    .logo-brand span {
+      color: var(--aot-cyan);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-link {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text-main);
+      transition: var(--transition);
+    }
+
+    .nav-link:hover {
+      color: var(--aot-cyan);
+    }
+
+    .mobile-menu-btn {
+      display: none;
+      font-size: 1.6rem;
+      cursor: pointer;
+      color: var(--aot-navy-dark);
+    }
+
+    /* ==========================================================================
+       HERO SECTION (High-Tech Mesh + Real Image Layering)
+       ========================================================================== */
+    .hero-wrap {
+      position: relative;
+      background: radial-gradient(circle at 85% 20%, rgba(0, 163, 224, 0.25) 0%, transparent 50%),
+                  linear-gradient(135deg, var(--aot-navy-deep) 0%, var(--aot-navy-dark) 60%, #063156 100%);
+      color: #FFFFFF;
+      padding: 100px 0 110px;
+      overflow: hidden;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .hero-content h1 {
+      font-size: 3.35rem;
+      color: #FFFFFF;
+      margin-bottom: 22px;
+      letter-spacing: -0.8px;
+    }
+
+    .hero-content h1 span {
+      background: linear-gradient(90deg, #FFFFFF 0%, var(--aot-cyan) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-content p {
+      font-size: 1.15rem;
+      color: #D1DFEC;
+      margin-bottom: 36px;
+      line-height: 1.7;
+    }
+
+    .hero-btn-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    /* Hero Image Composition */
+    .hero-visual-holder {
+      position: relative;
+      display: flex;
+      justify-content: center;
+    }
+
+    .hero-main-img-card {
+      position: relative;
+      width: 100%;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.45);
+      border: 2px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .hero-main-img-card img {
+      width: 100%;
+      height: 440px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.8s ease;
+    }
+
+    .hero-main-img-card:hover img {
+      transform: scale(1.04);
+    }
+
+    /* Floating Stats Cards (Celonis/Oracle page style) */
+    .floating-pill {
+      position: absolute;
+      background: rgba(7, 19, 38, 0.88);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(0, 163, 224, 0.4);
+      padding: 16px 22px;
+      border-radius: var(--radius-md);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      animation: floatMotion 4s ease-in-out infinite alternate;
+    }
+
+    .pill-top-right {
+      top: -24px;
+      right: -20px;
+    }
+
+    .pill-bottom-left {
+      bottom: -24px;
+      left: -20px;
+      animation-delay: 2s;
+    }
+
+    @keyframes floatMotion {
+      0% { transform: translateY(0px); }
+      100% { transform: translateY(-10px); }
+    }
+
+    .pill-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: var(--aot-cyan-glow);
+      color: var(--aot-cyan);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+    }
+
+    .pill-data h4 {
+      font-size: 1.35rem;
+      color: #FFFFFF;
+      margin-bottom: 2px;
+    }
+
+    .pill-data p {
+      font-size: 0.82rem;
+      color: #A4B9D1;
+      font-weight: 500;
+    }
+
+    /* ==========================================================================
+       METRICS / STATS RIBBON
+       ========================================================================== */
+    .stats-ribbon {
+      background: #FFFFFF;
+      padding: 35px 0;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      text-align: center;
+    }
+
+    .stat-item h3 {
+      font-size: 2.2rem;
+      color: var(--aot-blue-main);
+      margin-bottom: 4px;
+    }
+
+    .stat-item p {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    /* ==========================================================================
+       WHY CHOOSE US (CARDS GRID)
+       ========================================================================== */
+    .section-padding {
+      padding: 95px 0;
+    }
+
+    .bg-soft-blue {
+      background-color: var(--bg-light);
+    }
+
+    .cards-grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+
+    .aot-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 38px 30px;
+      transition: var(--transition);
+      position: relative;
+    }
+
+    .aot-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-hover);
+      border-color: var(--aot-cyan);
+    }
+
+    .aot-card-icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 14px;
+      background: rgba(15, 82, 186, 0.08);
+      color: var(--aot-blue-main);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: 24px;
+      transition: var(--transition);
+    }
+
+    .aot-card:hover .aot-card-icon {
+      background: var(--aot-blue-main);
+      color: #FFFFFF;
+    }
+
+    .aot-card h3 {
+      font-size: 1.3rem;
+      margin-bottom: 12px;
+    }
+
+    .aot-card p {
+      font-size: 0.96rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* ==========================================================================
+       PRACTICE AREAS / SERVICES (TABS + IMAGE PANELS)
+       ========================================================================== */
+    .tabs-controller {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      margin-bottom: 45px;
+    }
+
+    .tab-pill-btn {
+      padding: 14px 34px;
+      font-size: 1rem;
+      font-weight: 700;
+      border-radius: 50px;
+      border: 1.5px solid var(--border-color);
+      background: #FFFFFF;
+      color: var(--text-main);
+      cursor: pointer;
+      transition: var(--transition);
+      font-family: 'Space Grotesk', sans-serif;
+    }
+
+    .tab-pill-btn.active, .tab-pill-btn:hover {
+      background: var(--aot-navy-dark);
+      color: #FFFFFF;
+      border-color: var(--aot-navy-dark);
+      box-shadow: 0 6px 18px rgba(0, 43, 73, 0.2);
+    }
+
+    .tab-content-panel {
+      display: none;
+      animation: tabFadeIn 0.4s ease-in-out;
+    }
+
+    .tab-content-panel.active {
+      display: block;
+    }
+
+    @keyframes tabFadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .service-items-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .service-box {
+      background: #FFFFFF;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 32px 26px;
+      transition: var(--transition);
+    }
+
+    .service-box:hover {
+      border-color: var(--aot-cyan);
+      box-shadow: var(--shadow-subtle);
+      transform: translateY(-5px);
+    }
+
+    .service-box .s-ico {
+      font-size: 1.7rem;
+      color: var(--aot-cyan);
+      margin-bottom: 18px;
+    }
+
+    .service-box h4 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+
+    .service-box p {
+      font-size: 0.94rem;
+      color: var(--text-muted);
+    }
+
+    /* ==========================================================================
+       FEATURE HIGHLIGHT WITH VISUAL (Image + Split Content)
+       ========================================================================== */
+    .split-feature-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .feature-img-box {
+      position: relative;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-hover);
+    }
+
+    .feature-img-box img {
+      width: 100%;
+      height: 480px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .feature-list-check {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      margin-top: 25px;
+    }
+
+    .feature-list-check li {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      font-size: 1.02rem;
+      color: var(--text-main);
+    }
+
+    .feature-list-check li i {
+      color: var(--aot-cyan);
+      font-size: 1.25rem;
+      margin-top: 3px;
+    }
+
+    /* ==========================================================================
+       PARTNER CALLOUT BANNER
+       ========================================================================== */
+    .partner-card-banner {
+      background: linear-gradient(135deg, var(--aot-navy-deep) 0%, var(--aot-navy-dark) 100%);
+      color: #FFFFFF;
+      border-radius: var(--radius-lg);
+      padding: 65px;
+      box-shadow: var(--shadow-hover);
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 40px;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .partner-card-banner::before {
+      content: '';
+      position: absolute;
+      top: -50px;
+      right: -50px;
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle, rgba(0, 163, 224, 0.2) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+
+    .partner-card-banner h2 {
+      color: #FFFFFF;
+      font-size: 2.3rem;
+      margin-bottom: 18px;
+    }
+
+    .partner-card-banner p {
+      color: #D1DFEC;
+      margin-bottom: 28px;
+      font-size: 1.05rem;
+    }
+
+    /* ==========================================================================
+       CONTACT & CONSULTATION SECTION
+       ========================================================================== */
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 50px;
+      align-items: flex-start;
+    }
+
+    .contact-card-sidebar {
+      background: var(--bg-light);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 40px;
+    }
+
+    .contact-channels {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .channel-box {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      background: #FFFFFF;
+      padding: 16px 20px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-color);
+    }
+
+    .channel-box i {
+      font-size: 1.3rem;
+      color: var(--aot-cyan);
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--aot-cyan-glow);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .channel-box h6 {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .channel-box a {
+      font-weight: 700;
+      color: var(--aot-navy-dark);
+      font-size: 1rem;
+    }
+
+    .contact-form-container {
+      background: #FFFFFF;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 45px;
+      box-shadow: var(--shadow-subtle);
+    }
+
+    .form-group-item {
+      margin-bottom: 22px;
+    }
+
+    .form-group-item label {
+      display: block;
+      font-size: 0.92rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .form-input-field {
+      width: 100%;
+      padding: 13px 18px;
+      border: 1.5px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      font-family: inherit;
+      font-size: 0.96rem;
+      transition: var(--transition);
+    }
+
+    .form-input-field:focus {
+      outline: none;
+      border-color: var(--aot-cyan);
+      box-shadow: 0 0 0 4px var(--aot-cyan-glow);
+    }
+
+    textarea.form-input-field {
+      min-height: 125px;
+      resize: vertical;
+    }
+
+    /* ==========================================================================
+       FOOTER
+       ========================================================================== */
+    .site-footer {
+      background: var(--aot-navy-deep);
+      color: #94A3B8;
+      padding: 80px 0 35px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .footer-columns {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 55px;
+    }
+
+    .footer-columns .logo-brand {
+      color: #FFFFFF;
+      margin-bottom: 18px;
+    }
+
+    .footer-nav-col h4 {
+      color: #FFFFFF;
+      font-size: 1.15rem;
+      margin-bottom: 22px;
+    }
+
+    .footer-nav-col ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .footer-nav-col a {
+      font-size: 0.92rem;
+      transition: var(--transition);
+    }
+
+    .footer-nav-col a:hover {
+      color: var(--aot-cyan);
+      padding-left: 5px;
+    }
+
+    .footer-legal {
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding-top: 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.88rem;
+    }
+
+    /* ==========================================================================
+       RESPONSIVENESS
+       ========================================================================== */
+    @media (max-width: 992px) {
+      .hero-grid, .split-feature-section, .partner-card-banner, .contact-layout {
+        grid-template-columns: 1fr;
+        gap: 45px;
+      }
+      .cards-grid-3, .service-items-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+      }
+      .footer-columns {
+        grid-template-columns: 1fr 1fr;
+      }
+      .hero-content h1 {
+        font-size: 2.7rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 82px;
+        left: 0;
+        width: 100%;
+        background: #FFFFFF;
+        flex-direction: column;
+        padding: 30px 24px;
+        box-shadow: var(--shadow-hover);
+      }
+      .nav-links.open {
+        display: flex;
+      }
+      .mobile-menu-btn {
+        display: block;
+      }
+      .cards-grid-3, .service-items-grid {
+        grid-template-columns: 1fr;
+      }
+      .tabs-controller {
+        flex-direction: column;
+      }
+      .footer-columns {
+        grid-template-columns: 1fr;
+      }
+      .hero-content h1 {
+        font-size: 2.2rem;
+      }
+      .floating-pill {
+        display: none;
+      }
+      .partner-card-banner {
+        padding: 40px 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Navigation -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="#" class="logo-brand">
+        <i class="fa-solid fa-cube text-primary"></i> AOT<span>DevOps</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#why-us" class="nav-link">Why Choose Us</a></li>
+        <li><a href="#services" class="nav-link">Practice Areas</a></li>
+        <li><a href="#consulting" class="nav-link">Consulting &amp; Strategy</a></li>
+        <li><a href="#contact" class="btn btn-cyan">Get Started</a></li>
+      </ul>
+      <div class="mobile-menu-btn" id="mobileBtn">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-wrap">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="badge-pill">
+            <i class="fa-solid fa-shield-halved"></i> Approved DevOps Managed Services &amp; Consulting
+          </div>
+          <h1>Accelerate Your Software Delivery with <span>Expert DevOps Solutions</span></h1>
+          <p>
+            At AOT, we specialize in transforming your development and operations processes[cite: 1]. Our comprehensive DevOps managed services and strategic consulting help your organization achieve faster, reliable, and secure software deployments—driving innovation and growth[cite: 1].
+          </p>
+          <div class="hero-btn-group">
+            <a href="#contact" class="btn btn-cyan">
+              <i class="fa-regular fa-calendar-check"></i> Request Free Consultation
+            </a>
+            <a href="#services" class="btn btn-outline-white">
+              <i class="fa-solid fa-layer-group"></i> Explore Services
+            </a>
+          </div>
+        </div>
+
+        <!-- High-Res Hero Composition with Floating Status Badges -->
+        <div class="hero-visual-holder">
+          <div class="hero-main-img-card">
+            <!-- High-Res Cloud & DevOps Engineering Image -->
+            <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=1200&auto=format&fit=crop" alt="DevOps Cloud Automation Infrastructure">
+          </div>
+
+          <!-- Top Floating Metric Badge -->
+          <div class="floating-pill pill-top-right">
+            <div class="pill-icon"><i class="fa-solid fa-gauge-high"></i></div>
+            <div class="pill-data">
+              <h4>50% Faster</h4>
+              <p>Release Velocity</p>
+            </div>
+          </div>
+
+          <!-- Bottom Floating Metric Badge -->
+          <div class="floating-pill pill-bottom-left">
+            <div class="pill-icon"><i class="fa-solid fa-cloud-arrow-up"></i></div>
+            <div class="pill-data">
+              <h4>99.99% Uptime</h4>
+              <p>24/7 Managed Reliability</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Value Metrics Ribbon -->
+  <div class="stats-ribbon">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <h3>24/7</h3>
+          <p>Proactive Operational Support[cite: 1]</p>
+        </div>
+        <div class="stat-item">
+          <h3>100%</h3>
+          <p>Automated Infrastructure as Code[cite: 1]</p>
+        </div>
+        <div class="stat-item">
+          <h3>30%+</h3>
+          <p>Cloud Resource Cost Optimization[cite: 1]</p>
+        </div>
+        <div class="stat-item">
+          <h3>DevSecOps</h3>
+          <p>End-to-End Pipeline Security[cite: 1]</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Why Choose Us -->
+  <section id="why-us" class="section-padding bg-soft-blue">
+    <div class="container">
+      <div class="section-header">
+        <div class="badge-pill">Enterprise Advantage</div>
+        <h2>Why Choose Our DevOps Services?</h2>
+        <p>Empowering forward-thinking enterprises with certified engineers, resilient pipelines, and proven agile methodologies[cite: 1].</p>
+      </div>
+
+      <div class="cards-grid-3">
+        <div class="aot-card">
+          <div class="aot-card-icon"><i class="fa-solid fa-certificate"></i></div>
+          <h3>Expertise &amp; Experience</h3>
+          <p>A dedicated team of certified DevOps professionals with proven enterprise track records[cite: 1].</p>
+        </div>
+
+        <div class="aot-card">
+          <div class="aot-card-icon"><i class="fa-solid fa-sliders"></i></div>
+          <h3>Tailored Solutions</h3>
+          <p>Custom infrastructure strategies strictly aligned with your specific business goals and technology stack[cite: 1].</p>
+        </div>
+
+        <div class="aot-card">
+          <div class="aot-card-icon"><i class="fa-solid fa-arrows-spin"></i></div>
+          <h3>End-to-End Support</h3>
+          <p>Comprehensive assistance from initial roadmap planning and execution to ongoing management and optimization[cite: 1].</p>
+        </div>
+
+        <div class="aot-card">
+          <div class="aot-card-icon"><i class="fa-solid fa-bolt"></i></div>
+          <h3>Enhanced Agility</h3>
+          <p>Accelerate release cycles and feature time-to-market with automated CI/CD pipelines and infrastructure[cite: 1].</p>
+        </div>
+
+        <div class="aot-card">
+          <div class="aot-card-icon"><i class="fa-solid fa-shield-halved"></i></div>
+          <h3>Security &amp; Compliance</h3>
+          <p>Integrate DevSecOps checks, governance, and security best practices directly into your core workflows[cite: 1].</p>
+        </div>
+
+        <div class="aot-card">
+          <div class="aot-card-icon"><i class="fa-solid fa-hand-holding-dollar"></i></div>
+          <h3>Cost Efficiency</h3>
+          <p>Optimize cloud compute resources and minimize operational expenditure through intelligent automation[cite: 1].</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Practice Areas / Services -->
+  <section id="services" class="section-padding">
+    <div class="container">
+      <div class="section-header">
+        <div class="badge-pill">Core Practices</div>
+        <h2>Our DevOps Services</h2>
+        <p>Explore our specialized managed services and strategic consulting engagements built for scale[cite: 1].</p>
+      </div>
+
+      <!-- Tab Buttons -->
+      <div class="tabs-controller">
+        <button class="tab-pill-btn active" onclick="switchTab(event, 'tab-managed')">
+          <i class="fa-solid fa-server me-2"></i> Managed DevOps Services
+        </button>
+        <button class="tab-pill-btn" onclick="switchTab(event, 'tab-consulting')">
+          <i class="fa-solid fa-compass-drafting me-2"></i> DevOps Consulting &amp; Strategy
+        </button>
+      </div>
+
+      <!-- Managed Services Panel -->
+      <div id="tab-managed" class="tab-content-panel active">
+        <div class="service-items-grid">
+          <div class="service-box">
+            <div class="s-ico"><i class="fa-solid fa-code-merge"></i></div>
+            <h4>Continuous Integration &amp; Delivery (CI/CD)</h4>
+            <p>Build, test, and deploy seamlessly with robust automated pipelines for zero-downtime releases[cite: 1].</p>
+          </div>
+          <div class="service-box">
+            <div class="s-ico"><i class="fa-solid fa-cubes"></i></div>
+            <h4>Infrastructure as Code (IaC)</h4>
+            <p>Automate environmental provisioning effortlessly using Terraform, AWS CloudFormation, and Ansible[cite: 1].</p>
+          </div>
+          <div class="service-box">
+            <div class="s-ico"><i class="fa-solid fa-cloud-arrow-up"></i></div>
+            <h4>Cloud Migration &amp; Optimization</h4>
+            <p>Transition to and optimize enterprise cloud environments across AWS, Microsoft Azure, and GCP[cite: 1].</p>
+          </div>
+          <div class="service-box">
+            <div class="s-ico"><i class="fa-solid fa-chart-line"></i></div>
+            <h4>Monitoring &amp; Logging</h4>
+            <p>Implement comprehensive observability, real-time alerting, and centralized log telemetry[cite: 1].</p>
+          </div>
+          <div class="service-box">
+            <div class="s-ico"><i class="fa-solid fa-lock"></i></div>
+            <h4>Security Automation</h4>
+            <p>Embed static and dynamic security checks, scans, and compliance gates into your delivery pipelines[cite: 1].</p>
+          </div>
+          <div class="service-box">
+            <div class="s-ico"><i class="fa-solid fa-headset"></i></div>
+            <h4>24/7 Operational Support</h4>
+            <p>Round-the-clock incident management and troubleshooting to ensure maximum uptime and performance[cite: 1].</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Consulting Panel -->
+      <div id="tab-consulting" class="tab-content-panel">
+        <div class="service-items-grid">
+          <div class="service-box">
+            <div class="s-ico"><i class="fa-solid fa-map-location-dot"></i></div>
+            <h4>Assessment &amp; Roadmap</h4>
+            <p>Analyze current engineering processes and build a strategic, step-by-step DevOps implementation roadmap[cite: 1].</p>
+          </div>
+          <div class="service-box">
+            <div class="s-ico"><i class="fa-solid fa-toolbox"></i></div>
+            <h4>Toolchain Selection</h4>
+            <p>Recommend and integrate the ideal toolsets tailored precisely to your infrastructure and team needs[cite: 1].</p>
+          </div>
+          <div class="service-box">
+            <div class="s-ico"><i class="fa-solid fa-gears"></i></div>
+            <h4>Automation Best Practices</h4>
+            <p>Streamline workflows, standardize pipelines, and eliminate manual deployment errors[cite: 1].</p>
+          </div>
+          <div class="service-box">
+            <div class="s-ico"><i class="fa-solid fa-people-group"></i></div>
+            <h4>Culture &amp; Process Transformation</h4>
+            <p>Foster an agile, collaborative DevOps mindset across your development and operations departments[cite: 1].</p>
+          </div>
+          <div class="service-box">
+            <div class="s-ico"><i class="fa-solid fa-chart-pie"></i></div>
+            <h4>Performance &amp; Cost Optimization</h4>
+            <p>Fine-tune cloud architectures for peak throughput, resource efficiency, and sustainable cost savings[cite: 1].</p>
+          </div>
+          <div class="service-box">
+            <div class="s-ico"><i class="fa-solid fa-chalkboard-user"></i></div>
+            <h4>Training &amp; Knowledge Transfer</h4>
+            <p>Equip and upskill your internal teams with the hands-on expertise they need to succeed independently[cite: 1].</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Visual Feature Split: Partner with Us -->
+  <section id="consulting" class="section-padding bg-soft-blue">
+    <div class="container">
+      <div class="split-feature-section">
+        <div class="feature-img-box">
+          <!-- High-Res Enterprise Software & Collaboration Image -->
+          <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1200&auto=format&fit=crop" alt="Engineers collaborating on DevOps CI/CD architecture">
+        </div>
+        <div>
+          <div class="badge-pill">Strategic Collaboration</div>
+          <h2 style="font-size: 2.4rem; margin-bottom: 20px;">Partner with Us for Sustainable Agility</h2>
+          <p style="color: var(--text-muted); font-size: 1.05rem;">
+            Empower your engineering squads to innovate faster while our dedicated managed operations guarantee stability, security, and continuous delivery.
+          </p>
+          <ul class="feature-list-check">
+            <li>
+              <i class="fa-solid fa-circle-check"></i>
+              <span><strong>Accelerate Time-to-Market:</strong> Gain a decisive competitive edge with rapid, predictable software release cycles[cite: 1].</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-circle-check"></i>
+              <span><strong>Boost Quality &amp; Reliability:</strong> Drastically reduce production failure rates and ensure continuous availability[cite: 1].</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-circle-check"></i>
+              <span><strong>Cross-Functional Collaboration:</strong> Enhance productivity, transparency, and morale across all technical squads[cite: 1].</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-circle-check"></i>
+              <span><strong>Resilient Infrastructure:</strong> Ensure complete scalability, multi-tier security, and disaster recovery preparedness[cite: 1].</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Banner Callout -->
+  <div class="container" style="margin-top: 70px;">
+    <div class="partner-card-banner">
+      <div>
+        <h2>Powering Innovation Through DevOps Excellence</h2>
+        <p>Accelerate your cloud modernization journey with certified specialists ready to architect, deploy, and manage your stack[cite: 1].</p>
+        <a href="#contact" class="btn btn-cyan"><i class="fa-solid fa-arrow-right"></i> Book Free Discovery Call</a>
+      </div>
+      <div>
+        <img src="https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?q=80&w=800&auto=format&fit=crop" alt="Cloud Infrastructure Code" style="width: 100%; border-radius: var(--radius-md); box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact & Consultation Section -->
+  <section id="contact" class="section-padding">
+    <div class="container">
+      <div class="section-header">
+        <div class="badge-pill">Get Started Today</div>
+        <h2>Ready to Accelerate Your DevOps Journey?</h2>
+        <p>Contact our experts today for a free strategic consultation and tailored roadmap[cite: 1]!</p>
+      </div>
+
+      <div class="contact-layout">
+        <div class="contact-card-sidebar">
+          <h3 style="font-size: 1.7rem; margin-bottom: 12px;">Contact Our Experts</h3>
+          <p style="color: var(--text-muted); font-size: 0.95rem;">
+            Fill out the form or reach out directly to speak with an enterprise DevOps consultant.
+          </p>
+
+          <div class="contact-channels">
+            <div class="channel-box">
+              <i class="fa-solid fa-envelope"></i>
+              <div>
+                <h6>Email Us</h6>
+                <a href="mailto:marketing@aot.sa">marketing@aot.sa</a>
+              </div>
+            </div>
+
+            <div class="channel-box">
+              <i class="fa-solid fa-phone"></i>
+              <div>
+                <h6>Call Our Experts</h6>
+                <a href="tel:+966112910605">+966 11 291 0605</a>
+              </div>
+            </div>
+
+            <div class="channel-box">
+              <i class="fa-solid fa-location-dot"></i>
+              <div>
+                <h6>Regional Office</h6>
+                <span style="font-weight: 700; color: var(--aot-navy-dark);">Riyadh, Kingdom of Saudi Arabia</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-container">
+          <form id="consultationForm" onsubmit="submitForm(event)">
+            <div class="form-group-item">
+              <label for="name">Your Name *</label>
+              <input type="text" id="name" class="form-input-field" placeholder="e.g. Tariq Al-Mansoor" required>
+            </div>
+            <div class="form-group-item">
+              <label for="email">Corporate Email *</label>
+              <input type="email" id="email" class="form-input-field" placeholder="tariq@company.com" required>
+            </div>
+            <div class="form-group-item">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" class="form-input-field" placeholder="+966 5X XXX XXXX">
+            </div>
+            <div class="form-group-item">
+              <label for="details">Project Requirements</label>
+              <textarea id="details" class="form-input-field" placeholder="Briefly describe your environment (CI/CD, Kubernetes, AWS/Azure, IaC)..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-cyan" style="width: 100%;">
+              Submit Consultation Request <i class="fa-solid fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-columns">
+        <div>
+          <a href="#" class="logo-brand">
+            <i class="fa-solid fa-cube"></i> AOT<span>DevOps</span>
+          </a>
+          <p style="margin-top: 14px; font-size: 0.92rem; line-height: 1.7; color: #94A3B8;">
+            AOT — Powering Innovation Through DevOps Excellence[cite: 1]. Empowering organizations across Saudi Arabia and the region with certified cloud architecture and managed operations.
+          </p>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4>Managed Services</h4>
+          <ul>
+            <li><a href="#services">CI/CD Pipelines[cite: 1]</a></li>
+            <li><a href="#services">Infrastructure as Code[cite: 1]</a></li>
+            <li><a href="#services">Cloud Migration[cite: 1]</a></li>
+            <li><a href="#services">24/7 Monitoring &amp; Support[cite: 1]</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4>DevOps Consulting</h4>
+          <ul>
+            <li><a href="#services">DevOps Roadmap[cite: 1]</a></li>
+            <li><a href="#services">Toolchain Integration[cite: 1]</a></li>
+            <li><a href="#services">Security Automation[cite: 1]</a></li>
+            <li><a href="#services">Culture Transformation[cite: 1]</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#why-us">Why Choose Us</a></li>
+            <li><a href="#consulting">Partner with Us</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-legal">
+        <p>&copy; 2026 - AOT. All rights reserved.</p>
+        <p>DevOps Managed Services &amp; Strategic Consulting</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script Interactions -->
+  <script>
+    // Tab Switching for Practice Areas
+    function switchTab(evt, tabId) {
+      const panels = document.querySelectorAll('.tab-content-panel');
+      panels.forEach(p => p.classList.remove('active'));
+
+      const buttons = document.querySelectorAll('.tab-pill-btn');
+      buttons.forEach(b => b.classList.remove('active'));
+
+      document.getElementById(tabId).classList.add('active');
+      evt.currentTarget.classList.add('active');
+    }
+
+    // Responsive Mobile Nav Toggle
+    const mobileBtn = document.getElementById('mobileBtn');
+    const navLinks = document.getElementById('navLinks');
+
+    mobileBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+    });
+
+    // Form submission feedback
+    function submitForm(event) {
+      event.preventDefault();
+      alert('Thank you for reaching out! Our DevOps specialists will review your requirements and get in touch within 24 hours.');
+      document.getElementById('consultationForm').reset();
+    }
+  </script>
+</body>
+</html>

@@ -21,7 +21,7 @@
 </head>
 <body>
 
-  <!-- Sticky Navigation Header -->
+  <!-- Sticky Dark Navigation Header (Immersive with Dark Hero) -->
   <header class="site-header" id="siteHeader">
     <div class="container nav-container">
       <a href="#" class="logo-link" aria-label="AOT Home">
@@ -38,7 +38,6 @@
       <!-- Navigation Links -->
       <nav class="nav-menu" id="navMenu">
         <a href="#why-choose-us" class="nav-link">Why Choose Us</a>
-        <a href="#pipeline" class="nav-link">CI/CD Pipeline</a>
         <a href="#services" class="nav-link">Services</a>
         <a href="#partnership" class="nav-link">Partnership</a>
         <a href="#contact" class="nav-cta-btn">Get Free Consultation</a>
@@ -47,41 +46,57 @@
   </header>
 
   <main>
-    <!-- Immersive Hero Section (Matching Celonis & Oracle AOT Layout) -->
+    <!-- Centered Dark Hero Section (Nexi Layout with AOT Colors) -->
     <section class="hero-section" id="hero">
-      <div class="container">
-        <div class="hero-grid">
-          <!-- Hero Left Column: Headings & CTAs -->
-          <div class="hero-content-left">
-            <div class="badge-capsule">
-              <span class="badge-capsule-tag">AOT</span>
-              <span class="badge-capsule-text">DevOps Managed Services & Consulting</span>
-            </div>
+      <!-- Decorative Sweeping Curved SVG Lines (Larger scale for dramatic styling) -->
+      <div class="decor-line decor-left" aria-hidden="true">
+        <svg width="600" height="600" viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M-150 50 C200 150, 350 350, 150 590" stroke="rgba(255, 255, 255, 0.04)" stroke-width="1.5" />
+          <path d="M-100 10 C280 120, 390 380, 200 590" stroke="rgba(255, 255, 255, 0.05)" stroke-width="1.5" />
+          <!-- Glowing Nodes -->
+          <circle cx="153" cy="210" r="3.5" fill="#DE2931" />
+          <circle cx="305" cy="340" r="3.5" fill="#FFFFFF" opacity="0.6" />
+          <circle cx="200" cy="480" r="3.5" fill="#DE2931" />
+        </svg>
+      </div>
+      <div class="decor-line decor-right" aria-hidden="true">
+        <svg width="600" height="600" viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M750 50 C400 150, 250 350, 450 590" stroke="rgba(255, 255, 255, 0.04)" stroke-width="1.5" />
+          <path d="M700 10 C320 120, 210 380, 400 590" stroke="rgba(255, 255, 255, 0.05)" stroke-width="1.5" />
+          <!-- Glowing Nodes -->
+          <circle cx="447" cy="210" r="3.5" fill="#DE2931" />
+          <circle cx="295" cy="340" r="3.5" fill="#FFFFFF" opacity="0.6" />
+          <circle cx="400" cy="480" r="3.5" fill="#DE2931" />
+        </svg>
+      </div>
 
-            <h1 class="hero-title">Accelerate Your Software Delivery with <span class="highlight-red">Expert DevOps Solutions</span></h1>
-            
-            <p class="hero-description">
-              At Advanced Operations Technology (AOT), we specialize in transforming your development and operations processes. Our comprehensive DevOps managed services and strategic consulting help your organization achieve faster, reliable, and secure software deployments—driving innovation and growth.
-            </p>
-
-            <div class="hero-ctas">
-              <a href="#contact" class="btn-primary">
-                Get Started Today
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-              </a>
-              <a href="#services" class="btn-secondary">Explore Services</a>
-            </div>
-          </div>
-
-          <!-- Hero Right Column: High-Resolution Hero Visual -->
-          <div class="hero-graphic-right">
-            <div class="hero-image-frame">
-              <img src="devops_hero_main.jpg" alt="AOT DevOps Control Center & Cloud Automation Dashboard" class="hero-main-img">
-            </div>
+      <div class="container hero-container-centered">
+        <!-- Center-Aligned Badge Capsule -->
+        <div class="badge-capsule-wrapper">
+          <div class="badge-capsule">
+            <span class="badge-capsule-tag">AOT</span>
+            <span class="badge-capsule-text">DevOps Managed Services & Consulting</span>
           </div>
         </div>
 
-        <!-- Floating High-Contrast Metrics Panel -->
+        <!-- H1 Centered Headline -->
+        <h1 class="hero-title">Accelerate Your Software Delivery with <span class="highlight-red">Expert DevOps Solutions</span></h1>
+        
+        <!-- Center Subtext -->
+        <p class="hero-description">
+          At Advanced Operations Technology (AOT), we specialize in transforming your development and operations processes. Our comprehensive DevOps managed services and strategic consulting help your organization achieve faster, reliable, and secure software deployments—driving innovation and growth.
+        </p>
+
+        <!-- Centered Dual Action CTAs -->
+        <div class="hero-ctas">
+          <a href="#contact" class="btn-primary">
+            Get Started Today
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+          <a href="#services" class="btn-secondary">Explore Services</a>
+        </div>
+
+        <!-- Centered Floating Stats Panel -->
         <div class="stats-panel">
           <div class="stat-item">
             <div class="stat-value">200x</div>
@@ -99,105 +114,58 @@
       </div>
     </section>
 
-    <!-- Why Choose Us Section -->
-    <section id="why-choose-us" class="why-choose-section">
+    <!-- Why Choose Us Section (Transitioning to Light Mode) -->
+    <section id="why-choose-us">
       <div class="container">
-        <div class="section-header text-center">
-          <h2>Why Choose <span class="highlight-red">DevOps Services</span> with Us?</h2>
-          <p class="section-subtitle">
-            Our certified expertise and innovative approach transforms your software lifecycle into a scalable competitive advantage.
-          </p>
-        </div>
+        <h2>Why Choose Our <span class="highlight-red">DevOps Services</span>?</h2>
         
         <div class="grid-3col">
           <div class="feature-card">
             <div class="card-icon" aria-hidden="true">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
             </div>
-            <h3>Certified Excellence</h3>
-            <p>Official DevOps & Cloud partnership ensuring cutting-edge technology access and proven deployment methodologies.</p>
+            <h3>Expertise & Experience</h3>
+            <p>A team of certified DevOps professionals with proven track records.</p>
           </div>
 
           <div class="feature-card">
             <div class="card-icon" aria-hidden="true">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg>
             </div>
-            <h3>Deep Industry Expertise</h3>
-            <p>Specialized DevOps consultants with proven track records across finance, government, logistics, and enterprise IT.</p>
+            <h3>Tailored Solutions</h3>
+            <p>Custom strategies aligned with your business goals and technology stack.</p>
           </div>
 
           <div class="feature-card">
             <div class="card-icon" aria-hidden="true">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
             </div>
-            <h3>Tailored Automation</h3>
-            <p>Custom infrastructure strategies and CI/CD pipelines aligned to your unique business targets and tech stack.</p>
+            <h3>End-to-End Support</h3>
+            <p>From planning and implementation to ongoing management and optimization.</p>
           </div>
 
           <div class="feature-card">
             <div class="card-icon" aria-hidden="true">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
             </div>
-            <h3>End-to-End Journey</h3>
-            <p>Complete lifecycle support from initial infrastructure audit through automated deployment, training, and 24/7 monitoring.</p>
+            <h3>Enhanced Agility</h3>
+            <p>Accelerate release cycles with automated pipelines and infrastructure.</p>
           </div>
 
           <div class="feature-card">
             <div class="card-icon" aria-hidden="true">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
             </div>
-            <h3>DevSecOps & Compliance</h3>
-            <p>Integrate automated security scans, compliance policy checks, and vulnerability analysis into every build step.</p>
+            <h3>Security & Compliance</h3>
+            <p>Integrate security best practices into your DevOps workflows.</p>
           </div>
 
           <div class="feature-card">
             <div class="card-icon" aria-hidden="true">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
             </div>
-            <h3>Rapid Time-to-Value</h3>
-            <p>Accelerated deployment methodology ensures quick ROI with measurable performance metrics and cloud cost savings.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CI/CD Pipeline Showcase Section (High Resolution Image Feature) -->
-    <section class="pipeline-section" id="pipeline">
-      <div class="container">
-        <div class="section-header text-center">
-          <h2>Automated <span class="highlight-red">CI/CD Pipeline</span> & Delivery Framework</h2>
-          <p class="section-subtitle">
-            Experience seamless software delivery with our high-resolution enterprise automated pipeline architecture.
-          </p>
-        </div>
-
-        <div class="pipeline-graphic-container">
-          <div class="pipeline-image-card">
-            <img src="devops_pipeline_sec.jpg" alt="AOT Enterprise Automated CI/CD Pipeline Diagram" class="pipeline-img">
-          </div>
-        </div>
-
-        <!-- Pipeline Feature Highlights -->
-        <div class="pipeline-highlights-grid">
-          <div class="pipeline-highlight-item">
-            <div class="highlight-number">01</div>
-            <h4>Code Commit & Build</h4>
-            <p>Automated trigger upon developer commit with instant syntax validation and unit testing.</p>
-          </div>
-          <div class="pipeline-highlight-item">
-            <div class="highlight-number">02</div>
-            <h4>DevSecOps Security Scan</h4>
-            <p>Embedded SAST/DAST checks, dependency audits, and vulnerability analysis prior to build approval.</p>
-          </div>
-          <div class="pipeline-highlight-item">
-            <div class="highlight-number">03</div>
-            <h4>Container & Cluster Prep</h4>
-            <p>Docker containerization and Kubernetes manifest staging with Helm chart validation.</p>
-          </div>
-          <div class="pipeline-highlight-item">
-            <div class="highlight-number">04</div>
-            <h4>Zero-Downtime Deploy</h4>
-            <p>Automated zero-downtime canary or blue/green deployment across multi-cloud environments.</p>
+            <h3>Cost Efficiency</h3>
+            <p>Optimize resources and reduce operational costs through automation.</p>
           </div>
         </div>
       </div>
@@ -206,12 +174,7 @@
     <!-- Services Breakdown Section -->
     <section class="services-section" id="services">
       <div class="container">
-        <div class="section-header text-center">
-          <h2>Our <span class="highlight-red">DevOps Services</span></h2>
-          <p class="section-subtitle">
-            Comprehensive DevOps implementation and strategic consulting tailored to your enterprise requirements.
-          </p>
-        </div>
+        <h2>Our <span class="highlight-red">DevOps Services</span></h2>
         
         <div class="tabs-container">
           <div class="tab-buttons" role="tablist" aria-label="Services Options">
@@ -224,7 +187,7 @@
           </div>
 
           <!-- Tab Panel 1: Managed DevOps Services -->
-          <div class="tab-panel active" id="managed-services" role="tabpanel">
+          <div class="tab-panel active" id="managed-services" role="tabpanel" aria-labelledby="tab-managed">
             <div class="services-grid">
               <div class="service-card">
                 <div class="service-icon-box" aria-hidden="true">
@@ -232,7 +195,7 @@
                 </div>
                 <div class="service-content">
                   <h4>Continuous Integration & Delivery (CI/CD)</h4>
-                  <p>Build, test, and deploy seamlessly with robust, automated pipelines.</p>
+                  <p>Build, test, and deploy seamlessly with automated pipelines.</p>
                 </div>
               </div>
 
@@ -242,7 +205,7 @@
                 </div>
                 <div class="service-content">
                   <h4>Infrastructure as Code (IaC)</h4>
-                  <p>Automate infrastructure provisioning with tools like Terraform, Ansible, and CloudFormation.</p>
+                  <p>Automate provisioning with tools like Terraform, CloudFormation.</p>
                 </div>
               </div>
 
@@ -252,7 +215,7 @@
                 </div>
                 <div class="service-content">
                   <h4>Cloud Migration & Optimization</h4>
-                  <p>Seamlessly transition to and optimize multi-cloud environments (AWS, Azure, GCP).</p>
+                  <p>Transition to and optimize cloud environments (AWS, Azure, GCP).</p>
                 </div>
               </div>
 
@@ -261,8 +224,8 @@
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
                 </div>
                 <div class="service-content">
-                  <h4>Monitoring & Observability</h4>
-                  <p>Implement real-time monitoring, alerting, log aggregation, and system telemetry.</p>
+                  <h4>Monitoring & Logging</h4>
+                  <p>Implement robust monitoring, alerting, and logging for proactive management.</p>
                 </div>
               </div>
 
@@ -271,8 +234,8 @@
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
                 </div>
                 <div class="service-content">
-                  <h4>Security Automation (DevSecOps)</h4>
-                  <p>Embed automated security policies and vulnerability scanners into build steps.</p>
+                  <h4>Security Automation</h4>
+                  <p>Embed security checks into your DevOps pipelines.</p>
                 </div>
               </div>
 
@@ -281,23 +244,23 @@
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
                 </div>
                 <div class="service-content">
-                  <h4>24/7 Managed Operations</h4>
-                  <p>Proactive management, incident response, and SLA guarantees for enterprise uptime.</p>
+                  <h4>Operational Support</h4>
+                  <p>24/7 management and troubleshooting to ensure uptime and performance.</p>
                 </div>
               </div>
             </div>
           </div>
 
           <!-- Tab Panel 2: DevOps Consulting & Strategy -->
-          <div class="tab-panel" id="consulting-services" role="tabpanel">
+          <div class="tab-panel" id="consulting-services" role="tabpanel" aria-labelledby="tab-consulting">
             <div class="services-grid">
               <div class="service-card">
                 <div class="service-icon-box" aria-hidden="true">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
                 </div>
                 <div class="service-content">
-                  <h4>Maturity Assessment & Roadmap</h4>
-                  <p>Comprehensive evaluation of current processes to construct a tailored DevOps roadmap.</p>
+                  <h4>Assessment & Roadmap</h4>
+                  <p>Analyze current processes and develop a strategic DevOps plan.</p>
                 </div>
               </div>
 
@@ -306,8 +269,8 @@
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
                 </div>
                 <div class="service-content">
-                  <h4>Toolchain Architecture</h4>
-                  <p>Selection, design, and integration of optimal tools customized to your infrastructure.</p>
+                  <h4>Toolchain Selection</h4>
+                  <p>Recommend and integrate the right tools for your needs.</p>
                 </div>
               </div>
 
@@ -317,7 +280,7 @@
                 </div>
                 <div class="service-content">
                   <h4>Automation Best Practices</h4>
-                  <p>Establish standardized automation frameworks to eliminate manual bottlenecks.</p>
+                  <p>Streamline workflows to maximize efficiency.</p>
                 </div>
               </div>
 
@@ -326,8 +289,8 @@
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
                 </div>
                 <div class="service-content">
-                  <h4>Culture & Process Enablement</h4>
-                  <p>Foster a collaborative DevOps mindset between development and operations teams.</p>
+                  <h4>Culture & Process Transformation</h4>
+                  <p>Foster a DevOps mindset across teams.</p>
                 </div>
               </div>
 
@@ -336,8 +299,8 @@
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
                 </div>
                 <div class="service-content">
-                  <h4>Performance & FinOps Optimization</h4>
-                  <p>Fine-tune cloud resource usage and lower operational overhead with FinOps principles.</p>
+                  <h4>Performance & Cost Optimization</h4>
+                  <p>Fine-tune your systems for peak performance and cost savings.</p>
                 </div>
               </div>
 
@@ -346,8 +309,8 @@
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
                 </div>
                 <div class="service-content">
-                  <h4>Team Training & Knowledge Transfer</h4>
-                  <p>Empower internal teams with hands-on training and operational runbooks.</p>
+                  <h4>Training & Knowledge Transfer</h4>
+                  <p>Equip your teams with the skills they need to succeed.</p>
                 </div>
               </div>
             </div>
@@ -356,67 +319,11 @@
       </div>
     </section>
 
-    <!-- Trusted Partnership Section (High Resolution Image Feature) -->
-    <section class="partnership-section" id="partnership">
-      <div class="container">
-        <div class="section-header text-center">
-          <h2>Trusted <span class="highlight-red">DevOps Partnership</span></h2>
-          <p class="section-subtitle">
-            Our certified DevOps architects ensure world-class infrastructure reliability backed by local expertise in Saudi Arabia and the MENA region.
-          </p>
-        </div>
-
-        <div class="partner-grid">
-          <!-- Left: Key Benefits List -->
-          <div class="partner-info-left">
-            <div class="partner-card-box">
-              <div class="partner-feature-item">
-                <div class="partner-icon">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><circle cx="12" cy="8" r="3"/></svg>
-                </div>
-                <div>
-                  <h4>Certified Implementation Engineers</h4>
-                  <p>Certified experts in AWS, Azure, GCP, Kubernetes, and Terraform bringing proven methodologies.</p>
-                </div>
-              </div>
-
-              <div class="partner-feature-item">
-                <div class="partner-icon">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-                </div>
-                <div>
-                  <h4>Local Market Expertise in KSA</h4>
-                  <p>Deep understanding of Saudi enterprise requirements, compliance standards, and data sovereignty.</p>
-                </div>
-              </div>
-
-              <div class="partner-feature-item">
-                <div class="partner-icon">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
-                </div>
-                <div>
-                  <h4>Accelerated Time-to-Value</h4>
-                  <p>De-risk adoption journeys with reusable IaC modules and standardized automation pipelines.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Right: High Resolution Partner Banner -->
-          <div class="partner-graphic-right">
-            <div class="partner-image-frame">
-              <img src="devops_partner_sec.jpg" alt="AOT Certified DevOps & Cloud Partnership Data Center" class="partner-img">
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Business Outcomes Section -->
-    <section class="impact-section">
+    <!-- Business Outcomes Section (Text Split layout restored) -->
+    <section class="impact-section" id="partnership">
       <div class="container split-layout">
         <div class="split-left">
-          <h2>Partner <span class="highlight-red">with Us</span> for Measurable Impact</h2>
+          <h2>Partner <span class="highlight-red">with Us</span></h2>
           <p>
             Gain a major competitive advantage, elevate software reliability, and increase engineering efficiency through AOT's DevOps enablement strategies.
           </p>
@@ -428,28 +335,28 @@
               <div class="outcome-icon" aria-hidden="true">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
               </div>
-              <span class="outcome-text">Gain a competitive edge with 10x faster time-to-market.</span>
+              <span class="outcome-text">Gain a competitive edge with faster time-to-market.</span>
             </li>
 
             <li class="outcome-item">
               <div class="outcome-icon" aria-hidden="true">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
               </div>
-              <span class="outcome-text">Improve quality and reliability of software releases with automated testing.</span>
+              <span class="outcome-text">Improve quality and reliability of software releases.</span>
             </li>
 
             <li class="outcome-item">
               <div class="outcome-icon" aria-hidden="true">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
               </div>
-              <span class="outcome-text">Enhance developer productivity and team collaboration.</span>
+              <span class="outcome-text">Enhance team collaboration and productivity.</span>
             </li>
 
             <li class="outcome-item">
               <div class="outcome-icon" aria-hidden="true">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
               </div>
-              <span class="outcome-text">Ensure your cloud infrastructure is secure, scalable, and resilient.</span>
+              <span class="outcome-text">Ensure your infrastructure is secure, scalable, and resilient.</span>
             </li>
           </ul>
         </div>
@@ -528,7 +435,6 @@
             <h5>Navigation</h5>
             <ul class="footer-links">
               <li><a href="#why-choose-us" class="footer-link">Why Choose Us</a></li>
-              <li><a href="#pipeline" class="footer-link">CI/CD Pipeline</a></li>
               <li><a href="#services" class="footer-link">Our Services</a></li>
               <li><a href="#partnership" class="footer-link">Partnership Value</a></li>
             </ul>
