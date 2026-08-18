@@ -264,7 +264,7 @@ header.site-header.scrolled {
   /* Load user's infinity loop image on the right, with a gradient mask on the left for text contrast */
   background-image: 
     linear-gradient(to right, #04091e 35%, rgba(4, 9, 30, 0.6) 65%, rgba(4, 9, 30, 0) 100%),
-    url('hero_loop.jpg');
+    url('hero-img.jpg');
   background-size: cover;
   background-position: right center;
   background-repeat: no-repeat;
