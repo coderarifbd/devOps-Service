@@ -845,6 +845,32 @@ header.site-header.scrolled {
   letter-spacing: -0.01em;
 }
 
+.partnership-lead {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 0.5rem;
+}
+
+.partnership-graphic-wrapper {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.04);
+}
+
+.partnership-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: var(--transition-normal);
+}
+
+.partnership-graphic-wrapper:hover .partnership-img {
+  transform: scale(1.02);
+}
+
 /* Conversion/Contact Form Section */
 .cta-card {
   background: #FFFFFF;
