@@ -256,17 +256,13 @@ header.site-header.scrolled {
 /* Immersive Dark Hero Section (Nexi Layout with Dark background) */
 .hero-section {
   padding-top: 150px;
-  padding-bottom: 60px; /* Reduced bottom padding */
+  padding-bottom: 110px; /* Restored comfortable bottom padding */
   background-color: #050814; /* Immersive Dark Space Blue background */
   position: relative;
-  overflow: visible; /* Allow stats card to hang off the edge */
-  /* Load generated dark technology background with red network lines */
+  overflow: hidden;
+  /* Crimson Ambient Glow spotlight centered behind text */
   background-image: 
-    linear-gradient(rgba(5, 8, 20, 0.75), rgba(5, 8, 20, 0.9)),
-    url('hero_bg.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+    radial-gradient(circle at 50% 40%, rgba(var(--accent-primary-rgb), 0.15) 0%, rgba(5, 8, 20, 0) 65%);
 }
 
 .hero-container-centered {
@@ -414,21 +410,22 @@ header.site-header.scrolled {
   transform: translateY(-2px);
 }
 
-/* Floating Stats Section under Hero (Overlapping Card layout) */
+/* Centered Dark Glassmorphic Stats Section under Hero */
 .stats-panel {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   width: 100%;
   max-width: 960px;
-  background: #FFFFFF; /* High-contrast white card */
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  background: rgba(255, 255, 255, 0.03); /* Translucent dark glass background */
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  border: 1px solid rgba(255, 255, 255, 0.08); /* White border glow */
   border-radius: var(--radius-md);
-  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08); /* Clean shadow blur */
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3); /* Stronger shadow */
   overflow: hidden;
   margin: 0 auto;
-  transform: translateY(110px); /* Hangs perfectly off the edge of Hero */
   position: relative;
-  z-index: 10;
+  z-index: 5;
 }
 
 .stat-item {
@@ -437,7 +434,7 @@ header.site-header.scrolled {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  border-right: 1px solid var(--border-color);
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .stat-item:last-child {
@@ -450,20 +447,20 @@ header.site-header.scrolled {
   color: var(--accent-primary);
   margin-bottom: 0.25rem;
   letter-spacing: -0.04em;
+  text-shadow: 0 0 30px rgba(var(--accent-primary-rgb), 0.3);
 }
 
 .stat-label {
   font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: var(--text-secondary); /* Dark slate gray text */
+  color: #CBD5E1; /* Light gray text for readability on dark backdrop */
   font-weight: 700;
 }
 
 /* Light Mode Section styling for body content below Hero */
 #why-choose-us {
   background-color: var(--bg-secondary);
-  padding-top: 150px; /* Offset the stats panel overlap */
 }
 
 #services, #partnership, #contact {
