@@ -858,6 +858,8 @@ header.site-header.scrolled {
   overflow: hidden;
   border: 1px solid var(--border-color);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.04);
+  max-width: 550px;
+  width: 100%;
 }
 
 .partnership-img {
