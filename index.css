@@ -921,6 +921,42 @@ footer.site-footer h5 {
   color: #FFFFFF;
 }
 
+/* Intermediate CTA Banner Section */
+.banner-cta-section {
+  background-color: #0F172B;
+  padding: 80px 0;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.banner-cta-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.banner-cta-title {
+  color: #FFFFFF;
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.02em;
+  font-weight: 800;
+}
+
+.banner-cta-desc {
+  color: #94A3B8;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 2.25rem;
+  font-weight: 400;
+  max-width: 680px;
+}
+
 /* Animations */
 @keyframes fadeIn {
   from {
