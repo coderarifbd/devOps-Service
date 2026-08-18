@@ -132,22 +132,25 @@ section:nth-child(even) {
   border-bottom: 1px solid rgba(0, 0, 0, 0.01);
 }
 
-/* Sticky Navigation Header - Styled Dark to blend with Dark Hero */
+/* Sticky Navigation Header - Transparent initially, solid on scroll */
 header.site-header {
-  position: sticky;
+  position: fixed; /* Fixed overlays header on top of hero background */
   top: 0;
   left: 0;
   width: 100%;
   z-index: 100;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  background: rgba(5, 8, 20, 0.85); /* Dark space navy matching hero */
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0); /* Transparent border */
+  background: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
   transition: var(--transition-normal);
 }
 
 header.site-header.scrolled {
-  background: rgba(5, 8, 20, 0.95);
+  background: rgba(4, 9, 30, 0.95); /* Matches hero dark navy color */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
 }
 
@@ -255,7 +258,7 @@ header.site-header.scrolled {
 
 /* Immersive Dark Hero Section (Left-aligned text with loop background) */
 .hero-section {
-  padding-top: 110px;
+  padding-top: 190px;
   padding-bottom: 20px; /* Reduced bottom padding for stats overlap */
   background-color: #04091e; /* Deep blue base matching image */
   position: relative;
@@ -1352,7 +1355,7 @@ footer.site-footer h5 {
   }
   
   .hero-section {
-    padding-top: 130px;
+    padding-top: 160px;
     padding-bottom: 80px;
   }
   
