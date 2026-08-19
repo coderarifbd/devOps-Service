@@ -27,7 +27,7 @@
   --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   
   /* Corners & Boundaries */
-  --container-width: 1140px;
+  --container-width: 1400px;
   --radius-sm: 6px;
   --radius-md: 12px;
   --radius-lg: 24px;
@@ -415,7 +415,7 @@ header.site-header.scrolled {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   width: 100%;
-  max-width: 960px;
+  max-width: 1140px;
   background: #FFFFFF; /* High-contrast white card */
   border: 1px solid rgba(0, 0, 0, 0.05);
   border-radius: var(--radius-md);
