@@ -1314,7 +1314,7 @@ footer.site-footer h5 {
   }
   
   #why-choose-us {
-    padding-top: 140px; /* Reduced top padding on mobile viewports */
+    padding-top: 80px; /* Reset to normal top padding since stats panel does not translate */
   }
   
   .nav-menu {
@@ -1372,7 +1372,10 @@ footer.site-footer h5 {
   
   .stats-panel {
     grid-template-columns: 1fr;
-    transform: translateY(80px); /* Hang out slightly less on mobile */
+    transform: none; /* Reset overlap translation on mobile */
+    margin: 2.5rem auto 0; /* Add normal spacing on top */
+    position: relative;
+    z-index: 10;
   }
   
   .stat-item {
@@ -1392,6 +1395,11 @@ footer.site-footer h5 {
     grid-template-columns: 1fr;
   }
   
+  .cta-card {
+    padding: 2.25rem 1.5rem;
+    gap: 2rem;
+  }
+  
   .footer-top {
     flex-direction: column;
     align-items: center;
@@ -1408,5 +1416,33 @@ footer.site-footer h5 {
     flex-direction: column;
     align-items: center;
     text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .tab-buttons {
+    flex-direction: column;
+    border-radius: var(--radius-md);
+    width: 100%;
+    background: transparent;
+    border: none;
+    gap: 0.75rem;
+    padding: 0;
+  }
+  
+  .tab-btn {
+    width: 100%;
+    border-radius: var(--radius-sm);
+    text-align: center;
+    padding: 0.85rem 1.5rem;
+    border: 1px solid var(--border-color);
+    background: var(--bg-secondary);
+  }
+  
+  .tab-btn.active {
+    background: var(--accent-primary);
+    color: #FFFFFF;
+    border-color: var(--accent-primary);
+    box-shadow: 0 4px 15px rgba(var(--accent-primary-rgb), 0.25);
   }
 }
