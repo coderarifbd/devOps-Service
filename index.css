@@ -1257,6 +1257,10 @@ footer.site-footer h5 {
     align-items: center;
     text-align: center;
   }
+
+  .badge-wrapper {
+    justify-content: center;
+  }
   
   .hero-section .hero-title,
   .hero-section .hero-description {
