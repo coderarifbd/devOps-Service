@@ -1203,7 +1203,7 @@ footer.site-footer h5 {
 
 /* Intermediate CTA Banner Section */
 .banner-cta-section {
-  background-color: #0F172B;
+  background-color: #0F172B !important;
   padding: 80px 0;
   position: relative;
   text-align: center;
