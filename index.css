@@ -1338,6 +1338,7 @@ header.site-header.scrolled {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  text-align: left;
 }
 
 .next-steps-title {
@@ -1347,18 +1348,22 @@ header.site-header.scrolled {
   margin-bottom: 0;
   text-transform: uppercase;
   letter-spacing: 0.02em;
+  text-align: left;
 }
 
 .next-steps-list {
   display: flex;
   flex-direction: column;
   gap: 0.85rem;
+  text-align: left;
 }
 
 .next-step-item {
   display: flex;
   align-items: center;
   gap: 1rem;
+  text-align: left;
+  justify-content: flex-start;
 }
 
 .step-number {
@@ -1381,6 +1386,7 @@ header.site-header.scrolled {
   font-weight: 600;
   color: var(--text-primary);
   line-height: 1.4;
+  text-align: left;
 }
 
 /* Contact Form */
@@ -1706,7 +1712,28 @@ footer.site-footer h5 {
   }
   
   .cta-details {
-    align-items: center;
+    align-items: flex-start;
+    text-align: left;
+    width: 100%;
+    max-width: 480px;
+  }
+
+  .next-steps-card {
+    text-align: left;
+    width: 100%;
+  }
+
+  .next-steps-title {
+    text-align: left;
+  }
+
+  .next-step-item {
+    text-align: left;
+    justify-content: flex-start;
+  }
+
+  .step-text {
+    text-align: left;
   }
 }
 
